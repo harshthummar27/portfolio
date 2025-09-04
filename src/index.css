@@ -1,0 +1,45 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* import vite-tailwind css */
+@import "tailwindcss";
+
+/* globle css */
+*{
+    font-family: "Roboto", sans-serif;
+}
+li{
+    list-style: none;
+}
+
+/* text-outline */
+.text-outline {
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+}
+
+/* page vartical line */
+.page-vartical-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background: rgba(102, 102, 102, 0.3);
+    z-index: -1;
+}
+.page-wrapper::before,
+.page-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background: rgba(102, 102, 102, 0.3);
+}
+.page-wrapper::before {
+    left: 18%;
+    z-index: 99;
+}
+.page-wrapper::after {
+    right: 18%;
+}
