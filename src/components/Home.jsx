@@ -2,7 +2,8 @@ import React from "react";
 import { HeadingHero } from "../utils/HeadingHero";
 import { FaFacebook, FaGit } from "react-icons/fa";
 import { BsInstagram, BsTwitterX, BsWhatsapp } from "react-icons/bs";
-import { LiaLinkedin } from "react-icons/lia";
+import { LiaLinkedin } from "react-icons/lia"
+import resume from "../assets/resume/Harsh.Resume.pdf.pdf"
 
 const Home = () => {
     return(
@@ -30,7 +31,7 @@ const Home = () => {
                         <div className="mt-8 flex flex-col sm:flex-row gap-4">
                             <a href="#experience" className="px-6 py-2 rounded-full bg-gradient-to-r from-teal-700 text-white hover:opacity-90 transition-opacity cursor-pointer">View My Work</a>
 
-                            <a href="/Harsh.Resume.pdf" download="Harsh.Resume.pdf" className="px-6 py-2 rounded-full bg-white/10 text-white hover:opacity-90 transition-opacity cursor-pointer">Download CV</a>
+                            <a href={resume} download="Harsh.Resume.pdf" className="px-6 py-2 rounded-full bg-white/10 text-white hover:opacity-90 transition-opacity cursor-pointer">Download CV</a>
                         </div>
                     </div>
                 </div>
