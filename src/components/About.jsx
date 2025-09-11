@@ -1,6 +1,7 @@
 import React from "react";
 import { GrideLine } from "../utils/GrideLine";
 import user from "../assets/about/img-1.jpg";
+import resume from "../assets/resume/Harsh_Resume_js.pdf"
 
 const About = () => {
     return(
@@ -17,7 +18,7 @@ const About = () => {
                     <h2 className="text-3xl font-bold border-b-2 border-neutral-500 mb-4 w-fit">About <span className="text-outline">me</span></h2>
                     <p className="text-neutral-300 mb-16 text-normal text-justifiy">I’m Harsh Patel, a dedicated and passionate software developer with a strong focus on building modern, scalable, and efficient digital solutions. I enjoy transforming complex problems into simple, elegant, and user-friendly applications that deliver real value. With a keen interest in both frontend and backend technologies, I strive to write clean, maintainable, and performance-driven code that meets industry standards and enhances user experience.</p>
                     <p className="text-neutral-300 mb-16 text-normal text-justifiy">Driven by curiosity and creativity, I specialize in frontend development, problem-solving, and building seamless experiences for users.</p>
-                    <a  href="/Harsh.Resume.pdf" download="Harsh.Resume.pdf" className="px-6 py-2 border border-neutral-400 rounde-full hover-bg-white transition hover:text-neutral-700 cursor-pointer">Download CV</a>
+                    <a  href={resume} download="Harsh.Resume.pdf" className="px-6 py-2 border border-neutral-400 rounde-full hover-bg-white transition hover:text-neutral-700 cursor-pointer">Download CV</a>
                 </div>
             </div>
         </section>

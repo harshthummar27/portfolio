@@ -1,17 +1,53 @@
-import {  FaAngular,  FaBootstrap,  FaCss3Alt,  FaHtml5,  FaJs,  FaNodeJs,  FaReact,  FaSass } from "react-icons/fa";
-import {MdOutlineSettingsApplications } from "react-icons/md";
-import {  SiC, SiCplusplus, SiExpress, SiFigma, SiFirebase, SiGit, SiGithub,  SiJavascript, SiMongodb, SiMysql, SiNetlify, SiPostgresql, SiPostman, SiRedux, SiSpring, SiTypescript, SiVercel } from "react-icons/si";
+import {
+  FaAngular,
+  FaBootstrap,
+  FaCss3Alt,
+  FaHtml5,
+  FaJs,
+  FaNodeJs,
+  FaReact,
+  FaSass,
+} from "react-icons/fa";
+import { MdOutlineSettingsApplications } from "react-icons/md";
+import {
+  SiC,
+  SiCplusplus,
+  SiExpress,
+  SiFigma,
+  SiFirebase,
+  SiGit,
+  SiGithub,
+  SiJavascript,
+  SiMongodb,
+  SiMysql,
+  SiNetlify,
+  SiPostgresql,
+  SiPostman,
+  SiRedux,
+  SiSpring,
+  SiTypescript,
+  SiVercel,
+} from "react-icons/si";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
-import {  GiMaterialsScience,  GiSandsOfTime } from "react-icons/gi";
+import { GiMaterialsScience, GiSandsOfTime } from "react-icons/gi";
 import { DiJava, DiPython, DiVisualstudio } from "react-icons/di";
 import { TbBrandCSharp } from "react-icons/tb";
 import { IoIosStarOutline } from "react-icons/io";
-import { FaHome } from "react-icons/fa"; 
-import { LuCircleUser, LuContact } from "react-icons/lu";
-import { IoBagHandleOutline } from "react-icons/io5";
+import { FaHome } from "react-icons/fa";
+import {
+  AiFillHome,
+  AiOutlineUser,
+  AiOutlineCode,
+  AiOutlineProject,
+  AiOutlinePicture,
+  AiOutlineMail,
+} from "react-icons/ai";
+// import { IoBagHandleOutline } from "react-icons/io5";
 import adiance from "../assets/portfolio/adiance.png";
 import arcis from "../assets/portfolio/arcisai.png";
 import zomatoclone from "../assets/portfolio/zomatoclon.png";
+
+import { BsGlobeCentralSouthAsia } from "react-icons/bs";
 
 export const skillsData = [
   {
@@ -24,8 +60,14 @@ export const skillsData = [
       { name: "Angular", icon: <FaAngular className="text-red-500" /> },
       { name: "Redux", icon: <SiRedux className="text-purple-500" /> },
       { name: "Next JS", icon: <RiNextjsFill className="text-white" /> },
-      { name: "Tailwind CSS",  icon: <RiTailwindCssFill className="text-teal-400" />},
-      { name: "Material UI", icon: <GiMaterialsScience className="text-blue-400" />,},
+      {
+        name: "Tailwind CSS",
+        icon: <RiTailwindCssFill className="text-teal-400" />,
+      },
+      {
+        name: "Material UI",
+        icon: <GiMaterialsScience className="text-blue-400" />,
+      },
       { name: "Bootstrap", icon: <FaBootstrap className="text-purple-600" /> },
     ],
   },
@@ -43,7 +85,10 @@ export const skillsData = [
     skills: [
       { name: "C", icon: <SiC className="text-blue-400" /> },
       { name: "C++", icon: <SiCplusplus className="text-blue-500" /> },
-      { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" /> },
+      {
+        name: "JavaScript",
+        icon: <SiJavascript className="text-yellow-400" />,
+      },
     ],
   },
   {
@@ -59,11 +104,27 @@ export const skillsData = [
 ];
 
 export const navItems = [
-  { id: "home", icon: <FaHome /> },
-  { id: "about", icon: <LuCircleUser /> },
-  { id: "skills", icon: <GiSandsOfTime /> },
-  { id: "portfolio", icon: <IoBagHandleOutline /> },
-  { id: "contact", icon: <LuContact /> },
+  { id: "home", label: "Home", path: "/home", icon: <AiFillHome /> },
+  { id: "about", label: "About", path: "/about", icon: <AiOutlineUser /> },
+  { id: "skills", label: "Skills", path: "/skills", icon: <AiOutlineCode /> },
+  {
+    id: "experience",
+    label: "Experience",
+    path: "/experience",
+    icon: <AiOutlineProject />,
+  },
+  {
+    id: "portfolio",
+    label: "Portfolio",
+    path: "/portfolio",
+    icon: <AiOutlinePicture />,
+  },
+  {
+    id: "contact",
+    label: "Contact",
+    path: "/contact",
+    icon: <AiOutlineMail />,
+  },
 ];
 
 // Testimonials data
@@ -99,24 +160,21 @@ export const portfolioItems = [
   {
     title: "Adiance Tecnology Website",
     category: "React JS",
-    image:
-      adiance,
+    image: adiance,
   },
   {
     title: "Arcis AI VMS",
     category: "Frontend Development",
-    image:
-      arcis,
+    image: arcis,
   },
   {
     title: "Zomato Clone",
     category: "Web Development",
-    image:
-      zomatoclone,
+    image: zomatoclone,
   },
 ];
 // experience data
- export const experiences = [
+export const experiences = [
   {
     id: 1,
     company: "Vmukti solutions Pvt Ltd",
@@ -146,6 +204,6 @@ export const portfolioItems = [
     period: "3 Months",
     description:
       "Successfully completed an intensive 3-month training program focused on modern frontend development with React.js. The course covered building responsive user interfaces, state management, component-driven architecture, React hooks, and integration with APIs. Gained hands-on experience by working on real-world projects and following best practices in UI/UX, Git version control, and deployment",
-    skills: ["React JS", "Redux", "JavaScript", "HTML-CSS", "C, C++" ],
+    skills: ["React JS", "Redux", "JavaScript", "HTML-CSS", "C, C++"],
   },
 ];

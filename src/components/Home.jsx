@@ -1,9 +1,9 @@
 import React from "react";
 import { HeadingHero } from "../utils/HeadingHero";
-import { FaFacebook, FaGit } from "react-icons/fa";
+import { FaGit } from "react-icons/fa";
 import { BsInstagram, BsTwitterX, BsWhatsapp } from "react-icons/bs";
 import { LiaLinkedin } from "react-icons/lia"
-import resume from "../assets/resume/Harsh.Resume.pdf.pdf"
+import resume from "../assets/resume/Harsh_Resume_js.pdf"
 
 const Home = () => {
     return(

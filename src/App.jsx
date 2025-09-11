@@ -1,39 +1,21 @@
-import { Fragment } from "react";
-import { HeadingHero } from "./utils/HeadingHero";
-import { GrideLine } from "./utils/GrideLine";
-import Navbar from "./components/Navbar";
-import Home from "./components/Home";
-import About from "./components/About";
-import Skills from "./components/Skills";
-import Experience from "./components/Experience";
-import Portfolio from "./components/Portfolio";
-import Contect from "./components/Contect";
-import Footer from "./components/Footer";
+// App.js
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import AdminLogin from "./components/AdminLogin";
+import AdminPanel from "./components/AdminPanel";
+import MainLayout from "./components/MainLayout";
 
-const App = () => {
+const App = () => (
+  <Router>
+    <Routes>
+      {/* admin routes — keep them before the public catch-all */}
+      <Route path="home/admin" element={<AdminLogin />} />
+      <Route path="/admin/panel" element={<AdminPanel />} />
 
-  return (
-    <Fragment>
-      {/* <div className="bg-gray-900">
-        <HeadingHero />
-      </div> */}
-
-        <div className="min-h-screen bg-[#202020]">
-          <Navbar />
-          <Home />
-          <About />
-          <Skills/>
-          <Experience />
-          <Portfolio />
-          <Contect />
-          <Footer />
-        </div>
-
-      {/* <div className="bg-gray-900 relative min-h-screen">
-        <GrideLine /> 
-      </div> */}
-    </Fragment>
-  )
-}
+      {/* public site: render MainLayout for everything else so layout + sections stay mounted */}
+      <Route path="/*" element={<MainLayout />} />
+    </Routes>
+  </Router>
+);
 
 export default App;
