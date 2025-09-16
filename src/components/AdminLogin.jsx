@@ -28,8 +28,7 @@ const AdminLogin = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center  bg-red-900">
-      <form onSubmit={handleSubmit} className="bg-white p-8 rounded shadow-md w-80">
-        <h2 className="text-2xl mb-4 font-bold">Admin Login</h2>
+      <form onSubmit={handleSubmit} className="bg-white p-8 rounded shadow-md w-80>
         {error && <div className="text-red-600 mb-2">{error}</div>}
         <input
           type="email"

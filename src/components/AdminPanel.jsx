@@ -10,11 +10,7 @@ const AdminPanel = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const token = localStorage.getItem("adminToken");
-    if (!token) navigate("/admin");
-    fetch(API_URL)
-      .then(res => res.json())
-      .then(data => setProjects(data));
+    tProjects(data));
   }, [navigate]);
 
   const handleChange = (e) => {
