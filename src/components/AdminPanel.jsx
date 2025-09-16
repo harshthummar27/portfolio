@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const API_URL = "http://localhost:5000/api/projects";
+const API_URL = "https://port-backend-1-fh54.onrender.com/api/projects";
 
 const AdminPanel = () => {
   const [projects, setProjects] = useState([]);
@@ -163,7 +163,7 @@ const AdminPanel = () => {
                   src={
                     item.image
                       ? item.image.startsWith("/uploads")
-                        ? `http://localhost:5000${item.image}`
+                        ? `https://port-backend-1-fh54.onrender.com${item.image}`
                         : item.image
                       : "https://via.placeholder.com/300x200?text=No+Image"
                   }

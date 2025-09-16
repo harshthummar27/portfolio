@@ -12,7 +12,7 @@ const App = () => (
       <Route path="home/admin" element={<AdminLogin />} />
       <Route path="/admin/panel" element={<AdminPanel />} />
 
-      {/* public site: render MainLayout for everything else so layout + sections stay mounted */}
+      {/* public site: render MainLayout for everything else so l ayout + sections stay mounted */}
       <Route path="/*" element={<MainLayout />} />
     </Routes>
   </Router>

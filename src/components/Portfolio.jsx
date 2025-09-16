@@ -4,7 +4,7 @@ const Portfolio = () => {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/projects")
+    fetch("https://port-backend-1-fh54.onrender.com/api/projects")
       .then((res) => res.json())  
       .then((data) => setProjects(data));
   }, []);
@@ -29,7 +29,7 @@ const Portfolio = () => {
                   src={
                     item.image
                       ? item.image.startsWith("/uploads")
-                        ? `http://localhost:5000${item.image}`
+                        ? `https://port-backend-1-fh54.onrender.com${item.image}`
                         : item.image
                       : "https://via.placeholder.com/300x200?text=No+Image"
                   }

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const API_URL = "http://localhost:5000/api/auth/login";
+const API_URL = "https://port-backend-1-fh54.onrender.com/api/auth/login";
 
 const AdminLogin = () => {
   const [email, setEmail] = useState("");
